@@ -133,3 +133,7 @@ ggmap(map2)+
 map2 <- get_stamenmap(bump2, zoom = 16, maptype = "watercolor")
 ggmap(map2)+
   geom_point(data=add, aes(x=lon,y=lat),size=12,pch=18,color="black")
+
+#Another outline alternative:
+quartz()
+map('worldHires','USA', fill = T, col = 'grey90',xlim = c(-71.5,-69), ylim = c(41,42.5))
